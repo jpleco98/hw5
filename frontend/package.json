@@ -1,0 +1,26 @@
+{
+  "name": "campus-customs-desk",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fontsource-variable/caveat": "^5.2.0",
+    "@fontsource-variable/newsreader": "^5.2.0",
+    "@fontsource-variable/recursive": "^5.2.0",
+    "@fontsource/special-elite": "^5.2.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  }
+}

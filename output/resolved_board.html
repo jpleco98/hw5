@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Campus Customs: Resolved Board</title>
+<style>
+  :root { --navy: #0f2d52; --ink: #1f2731; --muted: #5b6b7d; --line: #d6dee8; --bg: #f3efe6; --ok: #2e6b4a; --red: #b3262e; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 15px/1.55 "Segoe UI", system-ui, sans-serif; color: var(--ink); background: var(--bg); }
+  header { background: var(--navy); color: #fff; padding: 22px 32px; }
+  header h1 { margin: 0; font-size: 22px; }
+  header p { margin: 4px 0 0; color: #c9d8ec; font-size: 14px; }
+  .sum { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 14px; }
+  .sum div { background: rgba(255,255,255,.1); border-radius: 8px; padding: 8px 14px; font-size: 13px; }
+  .sum b { display: block; font-size: 18px; }
+  nav { display: flex; gap: 8px; padding: 14px 32px 0; flex-wrap: wrap; }
+  nav a { text-decoration: none; color: var(--navy); background: #fff; border: 1px solid var(--line); padding: 6px 14px; border-radius: 999px; font-weight: 600; font-size: 14px; }
+  main { max-width: 1180px; margin: 0 auto; padding: 18px 32px 60px; }
+  section { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; margin-bottom: 26px; }
+  h2 { margin: 0 0 4px; color: var(--navy); font-size: 20px; }
+  .meta { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
+  .pill { display: inline-block; font-size: 12px; padding: 2px 10px; border-radius: 999px; margin-right: 6px; font-weight: 600; }
+  .p-res { background: #dcefe3; color: var(--ok); }
+  .p-ven { background: #dce9f6; color: #234a75; }
+  .p-prog { background: #f1ece1; color: #6a5a3c; }
+  .grid { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 20px; align-items: start; }
+  figure { margin: 0; }
+  figure img { width: 100%; border-radius: 8px; border: 1px solid var(--line); display: block; cursor: zoom-in; }
+  figcaption { font-size: 12.5px; color: var(--muted); margin-top: 6px; }
+  .facts { font-size: 14px; }
+  .facts dt { font-weight: 700; color: var(--navy); margin-top: 10px; font-size: 12px; text-transform: uppercase; letter-spacing: .05em; }
+  .facts dd { margin: 2px 0 0; }
+  .money { font-variant-numeric: tabular-nums; }
+  .neg { color: var(--red); font-weight: 700; }
+  .zoom { position: fixed; inset: 0; background: rgba(10,20,35,.85); display: none; align-items: center; justify-content: center; padding: 20px; z-index: 9; cursor: zoom-out; }
+  .zoom img { max-width: 100%; max-height: 100%; border-radius: 6px; }
+  .zoom.on { display: flex; }
+  .extra { margin-top: 16px; }
+  .extra img { max-width: 560px; }
+  @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Campus Customs: Resolved Board</h1>
+  <p>Screenshots of the React desk (<code>http://localhost:5173</code>) after the full run on a freshly reset database. Each shot is the real app, captured at 1440×900 with headless Edge. Click a screenshot to enlarge it.</p>
+  <div class="sum">
+    <div>Starting checking<b class="money">$3,400.00</b></div>
+    <div>Paid out (2 human approvals)<b class="money">−$3,240.00</b></div>
+    <div>Ending checking (cash_accounts)<b class="money">$160.00</b></div>
+    <div>Tickets resolved by the team<b>3 of 3</b></div>
+  </div>
+</header>
+<nav><a href="#t101">Ticket 101</a><a href="#t102">Ticket 102</a><a href="#t103">Ticket 103</a></nav>
+<main>
+
+<section id="t101">
+  <h2>#101 · Bulldog tee for Tauhid Zaman</h2>
+  <div class="meta"><span class="pill p-res">Resolved by the team</span><span class="pill p-ven">board: waiting on vendor</span> customer_order · CC-TEE-WHITE S × 1</div>
+  <div class="grid">
+    <figure>
+      <img src="screenshots/board_101.png" alt="Desk showing ticket 101 resolved: red strings from Boss to Inventory, Accounting and Customer Service; Facilities greyed out; drawer at $160 with both payments on the tape">
+      <figcaption>Final desk for 101. There are three red strings, Boss → Inventory, Accounting and Customer Service, and Facilities is greyed out. The register tape shows <code>INV 501 −$840.00 ok Juan Pablo</code>.</figcaption>
+    </figure>
+    <dl class="facts">
+      <dt>Outcome</dt><dd>0 of 1 size S on the shelf. The only apparel vendor was blocked by overdue invoice #501, so the team requested the $840 payment and drafted an honest update for Tauhid.</dd>
+      <dt>Agents</dt><dd>Boss → Inventory (stock and vendor block) → Accounting (request #1) → Customer Service (draft #1).</dd>
+      <dt>Human approval</dt><dd>Request #1, <span class="money">$840.00</span> to Bulldog Print Co, approved by Juan Pablo.</dd>
+      <dt>Cash</dt><dd class="money">$3,400.00 → $2,560.00 <span class="neg">(−$840.00)</span></dd>
+    </dl>
+  </div>
+  <div class="extra">
+    <figure>
+      <img src="screenshots/101_before_signing.jpg" alt="Desk right after the 101 run, before signing: one check for $840 waiting in the drawer, balance still $3,400">
+      <figcaption>The same ticket right after the run, before the check was signed. The RESOLVED stamp and "1 check to sign" are on the slip, the $840 check to Bulldog Print Co is in the drawer, and the balance is still $3,400.00.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="t102">
+  <h2>#102 · Rent due for Elm City Properties</h2>
+  <div class="meta"><span class="pill p-res">Resolved by the team</span><span class="pill p-res">board: resolved</span> rent_notice · lease 1</div>
+  <div class="grid">
+    <figure>
+      <img src="screenshots/board_102.png" alt="Desk showing ticket 102 resolved: red strings from Boss to Facilities and Accounting; Inventory and Customer Service greyed out">
+      <figcaption>Final desk for 102. There are two red strings, Boss → Facilities and Accounting, and Inventory and Customer Service are greyed out. The debrief notes they weren't called.</figcaption>
+    </figure>
+    <dl class="facts">
+      <dt>Outcome</dt><dd>Facilities checked the email against lease 1: $2,400 due 2026-09-02, not overdue. The rent was requested and paid before the due date, and the lease's next due date moved to 2026-10-02.</dd>
+      <dt>Agents</dt><dd>Boss → Facilities (lease check) → Accounting (request #2, flagged $160 left).</dd>
+      <dt>Human approval</dt><dd>Request #2, <span class="money">$2,400.00</span> to Elm City Properties, approved by Juan Pablo.</dd>
+      <dt>Cash</dt><dd class="money">$2,560.00 → $160.00 <span class="neg">(−$2,400.00)</span></dd>
+    </dl>
+  </div>
+</section>
+
+<section id="t103">
+  <h2>#103 · Bulk hoodie discount for the Yale AI Club</h2>
+  <div class="meta"><span class="pill p-res">Resolved by the team</span><span class="pill p-prog">board: in progress (waiting on the club and on restock cash)</span> price_override · CC-HOOD-NAVY M × 20</div>
+  <div class="grid">
+    <figure>
+      <img src="screenshots/board_103.png" alt="Desk showing ticket 103 resolved: four red strings including Accounting to Inventory; Facilities greyed out">
+      <figcaption>Final desk for 103. There are four red strings, including the extra Accounting → Inventory hand-off, and Facilities is greyed out. No check was written, so the balance stays at $160.00.</figcaption>
+    </figure>
+    <dl class="facts">
+      <dt>Outcome</dt><dd>8 on hand, 12 short. Boss approved the standard 15% bulk price on the 8 in stock ($49.30 each, 55.4% margin). The $264 reprint wasn't ordered because only $160 was left and the vendor had been blocked. Draft #2 makes the offer to the club.</dd>
+      <dt>Agents</dt><dd>Boss → Inventory → Accounting (→ Inventory again) → Customer Service (draft #2).</dd>
+      <dt>Human approval</dt><dd>None needed: no payment or purchase order.</dd>
+      <dt>Cash</dt><dd class="money">$160.00 → $160.00 (no change)</dd>
+    </dl>
+  </div>
+</section>
+
+</main>
+<div class="zoom" id="zoom"><img alt=""></div>
+<script>
+  const z = document.getElementById('zoom'), zi = z.querySelector('img');
+  document.querySelectorAll('figure img').forEach(img => img.addEventListener('click', () => { zi.src = img.src; zi.alt = img.alt; z.classList.add('on'); }));
+  z.addEventListener('click', () => z.classList.remove('on'));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') z.classList.remove('on'); });
+</script>
+</body>
+</html>
